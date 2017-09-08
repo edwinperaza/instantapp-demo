@@ -20,13 +20,12 @@ android {
     buildToolsVersion '26.0.1'
     compileSdkVersion 26
     baseFeature = true
-    
+
     dataBinding {
         enabled = true
     }
 
     defaultConfig {
-//        applicationId "com.google.samples.apps.topeka"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
