@@ -9,5 +9,70 @@
         android:supportsRtl="false"
         android:theme="@style/Topeka"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+
+        <activity
+            android:name="com.google.samples.apps.topeka.ui.activity.SignInActivity"
+            android:theme="@style/Topeka.SignInActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="topeka.samples.androidinstantapps.com"
+                    android:pathPattern="/signin" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="topeka.samples.androidinstantapps.com"
+                    android:pathPattern="/signin" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.google.samples.apps.topeka.ui.activity.CategorySelectionActivity"
+            android:theme="@style/Topeka.CategorySelectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="topeka.samples.androidinstantapps.com"
+                    android:pathPattern="/category" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="topeka.samples.androidinstantapps.com"
+                    android:pathPattern="/category" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.google.samples.apps.topeka.ui.activity.QuizActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Topeka.QuizActivity" />
     </application>
 </manifest>
